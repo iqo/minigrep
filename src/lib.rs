@@ -29,11 +29,6 @@ impl Config {
             Some(arg) => arg,
             None => return Err("Didn't get a file path"),
         };
-/*         if args.len() < 3 {
-            return Err("not enough arguments");
-        }
-        let query = args[1].clone();
-        let file_path = args[2].clone(); */
         let ignore_case = env::var("IGNORE_CASE").is_ok();
         Ok(Config {
             query,
